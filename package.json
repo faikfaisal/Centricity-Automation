@@ -1,0 +1,17 @@
+{
+  "name": "centricity",
+  "version": "1.0.0",
+  "description": "Test automation project",
+  "main": "centricity_test.js",
+  "scripts": {
+    "test": "codeceptjs run --steps"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "codeceptjs-webdriverio": "^1.1.0",
+    "ignore-case": "^0.1.0",
+    "mocha-junit-reporter": "^1.13.0",
+    "mochawesome": "^2.3.0"
+  }
+}
