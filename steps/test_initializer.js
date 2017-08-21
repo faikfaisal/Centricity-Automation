@@ -16,7 +16,7 @@ module.exports = {
 
   autNavigateToHomePage() {
     I.startAut();
-    I.switchToWeb(properties.app.webview);
+    I.switchToWeb();
 
     loginPage.loginToCentricity(
       properties.credentials.username,

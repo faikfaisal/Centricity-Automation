@@ -25,17 +25,23 @@ exports.state = {
     "isLaunced": false
 };
 
-exports.ios = {
-    "defaultTeamId": "",
-};
-
 exports.app = {
-    "defaultAppName": "Centricity_Mobile.apk",
-    "defaultDeviceName": "Samsung",
-    "defaultPlatFormVersion": "6.0.1",
     "webview": "WEBVIEW_com.outsystemsenterprise.amoebatsctst.CentricityMobile",
     "package": "com.outsystemsenterprise.amoebatsctst.CentricityMobile",
     "activity": "MainActivity"
+};
+
+exports.android = {
+    "defaultAppName": "Centricity_Mobile.apk",
+    "defaultDeviceName": "Samsung",
+    "defaultPlatFormVersion": "6.0.1",
+};
+
+exports.ios = {
+    "defaultAppName": "Centricity.ipa",
+    "defaultDeviceName": "iPhone",
+    "defaultPlatFormVersion": "10.3.3",
+    "defaultTeamId": "CG3C36TJK7" 
 };
 
 exports.keyboardShortcuts = {

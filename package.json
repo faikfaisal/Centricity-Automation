@@ -9,9 +9,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "codeceptjs-webdriverio": "^1.1.0",
+    "codeceptjs-webdriverio": "latest",
     "ignore-case": "^0.1.0",
     "mocha-junit-reporter": "^1.13.0",
-    "mochawesome": "^2.3.0"
+    "mochawesome": "^2.3.0",
+    "WebdriverIO": "^4.7.1"
   }
 }

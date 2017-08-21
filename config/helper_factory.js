@@ -9,5 +9,7 @@ exports.createHelpers = function (launchMode) {
         return testObjectConfig.testObjectConfig;
     } else if (ignoreCase.equals(launchMode, properties.launchMode.android)) {
         return deviceConfig.androidConfig;
+    } else if (ignoreCase.equals(launchMode, properties.launchMode.ios)){
+        return deviceConfig.iosConfig;
     }
 };

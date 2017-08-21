@@ -2,7 +2,7 @@
 let helperFactory = require("./config/helper_factory");
 let helperItems = require("./helpers/helper_config");
 let properties = require("./properties");
-let launchMode = process.env.LAUNCH_MODE || properties.launchMode.android;
+let launchMode = process.env.LAUNCH_MODE || properties.launchMode.ios;
 
 let helper = {
   "helpers": Object.assign({}, helperItems.helpers, helperFactory.createHelpers(launchMode))
