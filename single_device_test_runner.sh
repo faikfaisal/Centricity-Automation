@@ -17,6 +17,7 @@ start_appium_ios(){
 
 start_web_proxy() {
     ios_webkit_debug_proxy -c $UDID:27753 -d &
+    export WEBKIT_PROXY_PID=$!
 }
 
 run_tests(){
@@ -25,12 +26,13 @@ run_tests(){
 
 kill_all_appium_servers(){
     kill -9 $APPIUM_PID_DEVICE_ONE
+    kill -9 $WEBKIT_PROXY_PID
     kill -9 $(ps aux | grep node | awk '{print $1}')
 }
 
 echo $1
 
-if [ "$1" == "android"]
+if [ "$1" == "android" ]
 then
 start_appium_android
 export LAUNCH_MODE="Android"
