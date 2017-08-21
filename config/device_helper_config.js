@@ -17,7 +17,7 @@ exports.androidConfig = {
     "port": portNumber,
     "restart": false,
     "manualStart": true,
-    "smartWait": 15000,
+    "smartWait": 35000,
     "desiredCapabilities": {
       "appPackage": properties.app.package,
       "appActivity": properties.app.activity,
@@ -39,6 +39,7 @@ let iosPlatFormVersion = process.env.IOS_PLATFORM_VERSION || properties.ios.defa
 let iosDeviceName = process.env.IOS_DEVICE_NAME || properties.ios.defaultDeviceName;
 let defaultPathToIOSApp = currentPath + path.sep + properties.ios.defaultAppName;
 let pathToAppFile = process.env.IOS_APP_FILE_PATH || defaultPathToIOSApp;
+let teamId = process.env.TEAM_ID || properties.ios.defaultTeamId;
 udid = process.env.UDID || "auto";
 
 exports.iosConfig = {
@@ -47,7 +48,7 @@ exports.iosConfig = {
     "port": portNumber,
     "restart": false,
     "manualStart": true,
-    "smartWait": 15000,
+    "smartWait": 35000,
     "desiredCapabilities": {
       "platformName": properties.launchMode.ios,
       "automationName": "XCUITest",
@@ -57,7 +58,7 @@ exports.iosConfig = {
       "clearSystemFiles": true,
       "startWDP": true,
       "platformVersion": iosPlatFormVersion,
-      "xcodeOrgId": properties.ios.defaultTeamId,
+      "xcodeOrgId": teamId,
       "xcodeSigningId": "iPhone Developer",
       "deviceName": iosDeviceName,
       "udid": "auto",

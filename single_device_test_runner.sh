@@ -12,7 +12,7 @@ start_appium_ios(){
     export APPIUM_PID_DEVICE_ONE=$!
     echo $APPIUM_PID_DEVICE_ONE
     echo "Pausing the process for 15 seconds to fire up appium"
-    sleep 15
+    sleep 20
 }
 
 start_web_proxy() {
@@ -45,6 +45,7 @@ export LAUNCH_MODE="ios"
 export IOS_DEVICE_NAME="iPhone"
 export IOS_PLATFORM_VERSION="10.3.3"
 export UDID="912c2bf3f479a66dcf3d999fbfa7dc44c5e9f7f3"
+export TEAM_ID="CG3C36TJK7"
 start_web_proxy
 start_appium_ios
 fi
